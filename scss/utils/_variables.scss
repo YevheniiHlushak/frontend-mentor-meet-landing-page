@@ -8,21 +8,27 @@
   --color-slate-300: #d1d1df;
   --color-white: #ffffff;
 
+  --font-family: "Red Hat Display", sans-serif;
   --fw-black: 900;
   --fw-medium: 500;
 
-  --font-size-large: 64px;
-  --font-size-medium: 40px;
-  --font-size-small: 18px;
-  --font-size-xsmall: 16px;
+  --heading-font-size-heading-desktop: 64;
+  --heading-font-size-mobile: 40;
+  --heading-line-height: 1.1;
 
-  --line-height-main: 1.1;
+  --text-font-size-desktop: 18;
+  --text-font-size-mobile: 16;
 
-  --letter-spacing: 4px;
+  --letter-spacing: 4;
 
-  --button-padding: 16px 40px;
+  --button-padding-block: 16;
+  --button-padding-inline: 40;
 
-  --border-radius: 29px;
+  --border-radius: 29;
 
-  --container-padding-inline: 35px;
+  --container-padding-inline: 35;
 }
+
+$mobile-bp: 375px;
+$tablet-bp: 768px;
+$desktop-bp: 1440px;

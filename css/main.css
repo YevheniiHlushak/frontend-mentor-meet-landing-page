@@ -8,17 +8,19 @@
   --color-slate-600: #87879d;
   --color-slate-300: #d1d1df;
   --color-white: #ffffff;
+  --font-family: "Red Hat Display", sans-serif;
   --fw-black: 900;
   --fw-medium: 500;
-  --font-size-large: 64px;
-  --font-size-medium: 40px;
-  --font-size-small: 18px;
-  --font-size-xsmall: 16px;
-  --line-height-main: 1.1;
-  --letter-spacing: 4px;
-  --button-padding: 16px 40px;
-  --border-radius: 29px;
-  --container-padding-inline: 35px;
+  --heading-font-size-heading-desktop: 64;
+  --heading-font-size-mobile: 40;
+  --heading-line-height: 1.1;
+  --text-font-size-desktop: 18;
+  --text-font-size-mobile: 16;
+  --letter-spacing: 4;
+  --button-padding-block: 16;
+  --button-padding-inline: 40;
+  --border-radius: 29;
+  --container-padding-inline: 35;
 }
 
 /**
@@ -170,19 +172,11 @@ button {
   (за исключением тех, у которых уже указан
   атрибут fill со значением 'none' или начинается с 'url')
  */
-:where([fill]:not([fill=none], [fill^=url])) {
-  fill: currentColor;
-}
-
 /**
   Приводим к единому цвету svg-элементы
   (за исключением тех, у которых уже указан
   атрибут stroke со значением 'none')
  */
-:where([stroke]:not([stroke=none], [stroke^=url])) {
-  stroke: currentColor;
-}
-
 /**
   Чиним баг задержки смены цвета при взаимодействии с svg-элементами
  */
@@ -212,6 +206,12 @@ svg * {
     scroll-behavior: auto !important;
   }
 }
+body {
+  font-family: var(--font-family);
+  font-size: clamp(var(--text-font-size-mobile)/16rem, var(--text-font-size-mobile)/16rem + (var(--text-font-size-desktop)/16 - var(--text-font-size-mobile)/16) * (100vw - 375px) / (90 - 23.4375), var(--text-font-size-desktop)/16rem);
+  font-weight: var(--fw-medium);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -223,4 +223,10 @@ svg * {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding-top: clamp(3rem, 3rem + (5 - 3) * (100vw - 375px) / (90 - 23.4375), 5rem);
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,7 @@
+@use "../utils/funktions" as *;
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding-top: fluid(48, 80);
+}
