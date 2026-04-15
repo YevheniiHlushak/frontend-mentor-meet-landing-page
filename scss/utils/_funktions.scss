@@ -1,0 +1,25 @@
+@use "sass:math";
+
+@function fluid($min, $max) {
+  $minViewportWidth: 375;
+  $maxViewportWidth: 1440;
+
+  $minSize: math.div($min, 16);
+  $maxSize: math.div($max, 16);
+
+  $minWidth: math.div($minViewportWidth, 16);
+  $maxWidth: math.div($maxViewportWidth, 16);
+
+  @return clamp(
+    #{$minSize}rem,
+    calc(
+      #{$minSize}rem + (#{$maxSize} - #{$minSize}) *
+        (100vw - $minViewportWidth * 1px) / (#{$maxWidth} - #{$minWidth})
+    ),
+    #{$maxSize}rem
+  );
+}
+
+@function rem($px) {
+  @return math.div($px, 16) * 1rem;
+}
