@@ -1,12 +1,23 @@
+@use "../utils/funktions" as *;
+@use "../utils/variables" as *;
+
 .visually-hidden {
   position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+  width: rem(1);
+  height: rem(1);
+  margin: -rem(-1);
   border: 0;
   padding: 0;
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.container {
+  padding-inline: rem(35);
+
+  @media screen and (min-width: $tablet-bp) and (max-width: $laptop-bp) {
+    padding-inline: fluid(44, 160, 768, 1024);
+  }
 }

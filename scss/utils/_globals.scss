@@ -2,6 +2,7 @@
 
 body {
   font-family: var(--font-family);
-  font-size: fluid(var(--text-font-size-mobile), var(--text-font-size-desktop));
+  font-size: fluid(16, 18);
   font-weight: var(--fw-medium);
+  color: var(--color-slate-600);
 }
