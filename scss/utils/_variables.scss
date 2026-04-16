@@ -1,3 +1,26 @@
+@use "../utils/funktions" as *;
+
+$mobile-bp: 374.98px;
+$tablet-bp: 767.98px;
+$laptop-bp: 1023.98px;
+$desktop-bp: 1439.98px;
+
+// all variables are defined in "px"
+
+$heading-font-size-heading-desktop: 64;
+$heading-font-size-mobile: 40;
+$heading-line-height: 1.1;
+
+$text-font-size-desktop: 18;
+$text-font-size-mobile: 16;
+
+$letter-spacing: 4;
+
+$button-padding-block: 16;
+$button-padding-inline: 40;
+
+$border-radius: 29;
+
 :root {
   --color-cyan-600: #4d96a9;
   --color-cyan-300: #8fe3f9;
@@ -12,23 +35,16 @@
   --fw-black: 900;
   --fw-medium: 500;
 
-  --heading-font-size-heading-desktop: 64;
-  --heading-font-size-mobile: 40;
-  --heading-line-height: 1.1;
+  --heading-font-size-heading-desktop: #{$heading-font-size-heading-desktop};
+  --heading-font-size-mobile: #{$heading-font-size-mobile};
+  --heading-line-height: #{$heading-line-height};
 
-  --text-font-size-desktop: 18;
-  --text-font-size-mobile: 16;
+  --text-font-size-desktop: #{$text-font-size-desktop};
+  --text-font-size-mobile: #{$text-font-size-mobile};
 
-  --letter-spacing: 4;
+  --letter-spacing: #{$letter-spacing}px;
 
-  --button-padding-block: 16;
-  --button-padding-inline: 40;
-
-  --border-radius: 29;
-
-  --container-padding-inline: 35;
+  --button-padding-block: #{$button-padding-block};
+  --button-padding-inline: #{$button-padding-inline};
+  --border-radius: #{$border-radius};
 }
-
-$mobile-bp: 375px;
-$tablet-bp: 768px;
-$desktop-bp: 1440px;

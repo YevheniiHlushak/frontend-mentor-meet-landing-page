@@ -1,0 +1,81 @@
+@use "../utils/funktions" as *;
+@use "../utils/variables" as *;
+
+.hero {
+  padding-block: rem(64) rem(32);
+  overflow: hidden;
+  text-align: center;
+
+  @media screen and (min-width: $tablet-bp) {
+    padding-block-end: rem(64);
+  }
+
+  &__image-wrapper--mobile {
+    display: flex;
+    justify-content: center;
+    margin-block-end: fluid(48, 72);
+
+    @media screen and (min-width: $desktop-bp) {
+      display: none;
+    }
+  }
+
+  &__image--mobile {
+    width: 105vw;
+    flex-shrink: 0;
+    max-width: none;
+  }
+
+  &__image-wrapper--desktop {
+    display: none;
+
+    @media screen and (min-width: $desktop-bp) {
+      display: block;
+      position: relative;
+    }
+  }
+
+  &__image--desktop-left {
+    position: absolute;
+    top: 0;
+    left: -3.5vw;
+  }
+  &__image--desktop-right {
+    position: absolute;
+    top: rem(50);
+    right: -3.5vw;
+  }
+
+  &__info {
+    margin-inline: auto;
+    max-width: 450px;
+  }
+
+  &__title {
+    margin-block-end: rem(24);
+    font-size: fluid(
+      $heading-font-size-mobile,
+      $heading-font-size-heading-desktop
+    );
+    line-height: var(--heading-line-hight);
+    color: var(--color-slate-900);
+    font-weight: var(--fw-black);
+  }
+
+  &__description {
+    margin-block-end: rem(24);
+  }
+
+  &__buttons-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(16);
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: $tablet-bp) {
+      flex-direction: row;
+      column-gap: rem(17);
+    }
+  }
+}
