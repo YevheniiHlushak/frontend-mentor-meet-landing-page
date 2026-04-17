@@ -7,8 +7,10 @@ $desktop-bp: 1439.98px;
 
 // all variables are defined in "px"
 
-$heading-font-size-heading-desktop: 64;
-$heading-font-size-mobile: 40;
+$h1-font-size-desktop: 64;
+$h1-font-size-mobile: 40;
+$h2-font-size-desktop: 40;
+$h2-font-size-mobile: 32;
 $heading-line-height: 1.1;
 
 $text-font-size-desktop: 18;
@@ -19,7 +21,8 @@ $letter-spacing: 4;
 $button-padding-block: 16;
 $button-padding-inline: 40;
 
-$border-radius: 29;
+$button-border-radius: 29;
+$image-border-radius: 8;
 
 :root {
   --color-cyan-600: #4d96a9;
@@ -31,12 +34,18 @@ $border-radius: 29;
   --color-slate-300: #d1d1df;
   --color-white: #ffffff;
 
+  --border: 1px solid var(--color-slate-300);
+  --button-border-radius: #{$button-border-radius};
+  --image-border-radius: #{$image-border-radius};
+
   --font-family: "Red Hat Display", sans-serif;
   --fw-black: 900;
   --fw-medium: 500;
 
-  --heading-font-size-heading-desktop: #{$heading-font-size-heading-desktop};
-  --heading-font-size-mobile: #{$heading-font-size-mobile};
+  --h1-font-size-desktop: #{$h1-font-size-desktop};
+  --h1-font-size-mobile: #{$h1-font-size-mobile};
+  --h2-font-size-desktop: #{$h2-font-size-desktop};
+  --h2-font-size-mobile: #{$h2-font-size-mobile};
   --heading-line-height: #{$heading-line-height};
 
   --text-font-size-desktop: #{$text-font-size-desktop};
@@ -46,5 +55,4 @@ $border-radius: 29;
 
   --button-padding-block: #{$button-padding-block};
   --button-padding-inline: #{$button-padding-inline};
-  --border-radius: #{$border-radius};
 }

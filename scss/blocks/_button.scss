@@ -3,7 +3,7 @@
 
 .button {
   padding: rem($button-padding-block) rem($button-padding-inline);
-  border-radius: rem($border-radius);
+  border-radius: rem($button-border-radius);
   border: none;
   font-weight: var(--fw-black);
   cursor: pointer;

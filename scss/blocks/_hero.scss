@@ -6,6 +6,13 @@
   overflow: hidden;
   text-align: center;
 
+  @media screen and (max-width: $tablet-bp) {
+    padding-inline: rem(35);
+  }
+  // @media screen and (min-width: $tablet-bp) and (max-width: $laptop-bp) {
+  //   padding-inline: fluid(44, 160, 768, 1024);
+  // }
+
   @media screen and (min-width: $tablet-bp) {
     padding-block-end: rem(64);
   }
@@ -53,10 +60,7 @@
 
   &__title {
     margin-block-end: rem(24);
-    font-size: fluid(
-      $heading-font-size-mobile,
-      $heading-font-size-heading-desktop
-    );
+    font-size: fluid($h1-font-size-mobile, $h1-font-size-desktop);
     line-height: var(--heading-line-hight);
     color: var(--color-slate-900);
     font-weight: var(--fw-black);
