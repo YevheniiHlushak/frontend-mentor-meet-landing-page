@@ -9,8 +9,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: rem(56);
-    height: rem(56);
+    width: fluid(56, 64);
+    height: fluid(56, 64);
     border-radius: 50%;
     border: var(--border);
 
