@@ -1,0 +1,31 @@
+@use "../utils/funktions" as *;
+@use "../utils/variables" as *;
+
+.circle {
+  padding-block-start: rem(80);
+
+  &__number {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(56);
+    height: rem(56);
+    border-radius: 50%;
+    border: var(--border);
+
+    &::before {
+      position: absolute;
+      top: -75%;
+      left: 50%;
+      translate: -50%;
+      display: block;
+      width: 80px;
+      height: 1px;
+      content: "";
+      rotate: 90deg;
+      background-color: var(--color-slate-300);
+      // border: var(--border);
+    }
+  }
+}

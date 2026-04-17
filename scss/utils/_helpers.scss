@@ -15,9 +15,15 @@
 }
 
 .container {
-  padding-inline: rem(35);
+  padding-inline: rem(32);
 
   @media screen and (min-width: $tablet-bp) and (max-width: $laptop-bp) {
-    padding-inline: fluid(44, 160, 768, 1024);
+    padding-inline: fluid(40, 153, 768, 1024);
   }
+}
+
+.title {
+  font-size: fluid($h2-font-size-mobile, $h2-font-size-desktop);
+  line-height: var(--heading-line-height);
+  font-weight: var(--fw-black);
 }

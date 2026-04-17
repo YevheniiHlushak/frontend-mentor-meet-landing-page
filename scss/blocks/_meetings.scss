@@ -1,0 +1,57 @@
+@use "../utils/funktions" as *;
+@use "../utils/variables" as *;
+
+.meetings {
+  padding-block: fluid(32, 56, 375, 768) fluid(64, 72, 375, 1024);
+  padding-inline: rem(32);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: rem(64);
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: fluid(16, 32);
+  }
+
+  &__item {
+    &--wrapper {
+      overflow: hidden;
+      border-radius: rem($image-border-radius);
+    }
+  }
+
+  &__member {
+    @media screen and (max-width: $tablet-bp) {
+      width: fluid(147, 152, 375, 768);
+    }
+
+    @media screen and (min-width: $tablet-bp) {
+      width: fluid(152, 256, 768);
+    }
+  }
+
+  &__info {
+    max-width: rem(544);
+    text-align: center;
+  }
+
+  &__suptitle {
+    margin-block-end: rem(16);
+    font-size: fluid(12, 16);
+    line-height: var(--heading-line-height);
+    text-transform: uppercase;
+    color: var(--color-cyan-600);
+    font-weight: var(--fw-black);
+    letter-spacing: rem($letter-spacing);
+  }
+
+  &__title {
+    margin-block-end: rem(32);
+    color: var(--color-slate-900);
+  }
+}
