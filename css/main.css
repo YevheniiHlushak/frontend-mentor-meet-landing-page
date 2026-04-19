@@ -345,6 +345,9 @@ body {
   background-color: var(--color-purple-600);
   color: var(--color-white);
 }
+.button--purple span {
+  color: var(--color-purpple-300);
+}
 
 .meetings {
   padding-block: clamp(2rem, 2rem + (56 - 32) * (100vw - 375px) / (768 - 375), 3.5rem) clamp(4rem, 4rem + (72 - 64) * (100vw - 375px) / (1024 - 375), 4.5rem);
@@ -406,10 +409,11 @@ body {
   height: clamp(3.5rem, 3.5rem + (64 - 56) * (100vw - 375px) / (1440 - 375), 4rem);
   border-radius: 50%;
   border: var(--border);
+  background-color: var(--color-white);
 }
 .circle__number::before {
   position: absolute;
-  top: -75%;
+  top: -68%;
   left: 50%;
   translate: -50%;
   display: block;
@@ -418,4 +422,51 @@ body {
   content: "";
   rotate: 90deg;
   background-color: var(--color-slate-300);
+}
+
+.footer {
+  position: relative;
+  padding-block-start: 6.75rem;
+  text-align: center;
+}
+.footer .circle {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  translate: -50%;
+}
+.footer__wrapper {
+  padding: 4rem clamp(2rem, 2rem + (132 - 32) * (100vw - 375px) / (768 - 375), 8.25rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1.5rem;
+  background: linear-gradient(rgba(77, 150, 169, 0.9), rgba(77, 150, 169, 0.9)), url("../../assets/tablet/image-footer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+@media screen and (min-width: 1023.98px) {
+  .footer__wrapper {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+    column-gap: 2rem;
+    padding: clamp(4rem, 4rem + (112 - 64) * (100vw - 1024px) / (1440 - 1024), 7rem) clamp(2rem, 2rem + (160 - 32) * (100vw - 1024px) / (1440 - 1024), 10rem);
+    background: linear-gradient(rgba(77, 150, 169, 0.9), rgba(77, 150, 169, 0.9)), url("../../assets/desktop/image-footer.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    background-size: contain;
+  }
+}
+.footer__title {
+  color: var(--color-white);
+}
+.footer__description {
+  color: var(--color-white);
+}
+.footer__button {
+  flex-shrink: 0;
 }/*# sourceMappingURL=main.css.map */

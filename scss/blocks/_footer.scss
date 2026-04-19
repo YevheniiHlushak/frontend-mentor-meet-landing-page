@@ -1,0 +1,57 @@
+@use "../utils/funktions" as *;
+@use "../utils/variables" as *;
+
+.footer {
+  position: relative;
+  padding-block-start: rem(108);
+  text-align: center;
+
+  & .circle {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    translate: -50%;
+  }
+
+  &__wrapper {
+    padding: rem(64) fluid(32, 132, 375, 768);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: rem(24);
+    background:
+      linear-gradient(rgba(77, 150, 169, 0.9), rgba(77, 150, 169, 0.9)),
+      url("../../assets/tablet/image-footer.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+
+    @media screen and (min-width: $laptop-bp) {
+      flex-direction: row;
+      text-align: left;
+      justify-content: space-between;
+      column-gap: rem(32);
+      padding: fluid(64, 112, 1024) fluid(32, 160, 1024);
+      background:
+        linear-gradient(rgba(77, 150, 169, 0.9), rgba(77, 150, 169, 0.9)),
+        url("../../assets/desktop/image-footer.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top center;
+      background-size: contain;
+    }
+  }
+
+  &__title {
+    color: var(--color-white);
+  }
+
+  &__description {
+    color: var(--color-white);
+  }
+
+  &__button {
+    flex-shrink: 0;
+  }
+}
