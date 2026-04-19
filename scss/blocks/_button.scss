@@ -7,6 +7,7 @@
   border: none;
   font-weight: var(--fw-black);
   cursor: pointer;
+
   &--cyan {
     background-color: var(--color-cyan-600);
     color: var(--color-white);
@@ -19,5 +20,9 @@
   &--purple {
     background-color: var(--color-purple-600);
     color: var(--color-white);
+
+    & span {
+      color: var(--color-purpple-300);
+    }
   }
 }

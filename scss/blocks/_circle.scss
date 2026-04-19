@@ -13,10 +13,11 @@
     height: fluid(56, 64);
     border-radius: 50%;
     border: var(--border);
+    background-color: var(--color-white);
 
     &::before {
       position: absolute;
-      top: -75%;
+      top: -68%;
       left: 50%;
       translate: -50%;
       display: block;
