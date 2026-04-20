@@ -1,0 +1,16 @@
+@use "../utils/funktions" as *;
+@use "../utils/variables" as *;
+
+.link {
+  text-decoration: none;
+  color: var(--color-cyan-300);
+  transition: color var(--transition-duration);
+
+  &:hover {
+    color: var(--color-purple-600);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition-duration: 0.01ms;
+  }
+}

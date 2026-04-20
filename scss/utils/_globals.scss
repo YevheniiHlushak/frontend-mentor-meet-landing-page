@@ -1,8 +1,18 @@
-@use "./funktions" as *;
+@use "../utils/funktions" as *;
+@use "../utils/variables" as *;
 
 body {
   font-family: var(--font-family);
   font-size: fluid(16, 18);
   font-weight: var(--fw-medium);
   color: var(--color-slate-600);
+}
+
+a:focus,
+button:focus,
+a:focus-visible,
+button:focus-visible {
+  outline: var(--outline);
+  outline-offset: var(--outline-offset);
+  border-radius: rem($image-border-radius);
 }
