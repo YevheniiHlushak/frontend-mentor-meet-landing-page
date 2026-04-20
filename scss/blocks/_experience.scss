@@ -21,8 +21,7 @@
     align-items: center;
     row-gap: rem(24);
     background:
-      linear-gradient(rgba(77, 150, 169, 0.9), rgba(77, 150, 169, 0.9)),
-      url("../assets/tablet/image-footer.jpg");
+      var(--linear-gradient), url("../assets/tablet/image-footer.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
@@ -39,7 +38,6 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: top center;
-      background-size: contain;
     }
   }
 

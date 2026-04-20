@@ -2,6 +2,7 @@
 @use "../utils/variables" as *;
 
 .button {
+  display: block;
   padding: rem($button-padding-block) rem($button-padding-inline);
   border-radius: rem($button-border-radius);
   border: none;

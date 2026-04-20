@@ -54,7 +54,7 @@
           <img
             class="hero__image--mobile"
             src="./assets/tablet/image-hero.png"
-            alt="many fotos of people"
+            alt=""
             width="433"
             height="160"
             loading="lazy"
@@ -66,7 +66,7 @@
           <img
             class="hero__image--desktop-left"
             src="./assets/desktop/image-hero-left.png"
-            alt="many fotos of people"
+            alt=""
             width="394"
             height="303"
             loading="lazy"
@@ -74,7 +74,7 @@
           <img
             class="hero__image--desktop-right"
             src="./assets/desktop/image-hero-right.png"
-            alt="many fotos of people"
+            alt=""
             width="394"
             height="303"
             loading="lazy"
@@ -91,9 +91,15 @@
 
           <!-- buttons -->
           <div class="hero__buttons-container">
-            <button class="hero__button button button--cyan" type="button">
+            <a
+              class="hero__button button button--cyan"
+              href="#"
+              download
+              rel="noopener noreferrer"
+              aria-label="Download the application version 1.3"
+            >
               Download <span>v1.3</span>
-            </button>
+            </a>
             <button class="hero__button button button--purple" type="button">
               What is it?
             </button>
@@ -104,7 +110,7 @@
       <!-- meetings -->
       <section class="meetings section">
         <div class="circle">
-          <p class="circle__number">01</p>
+          <span class="circle__number" aria-hidden="true">01</span>
         </div>
 
         <ul class="meetings__list">
@@ -113,7 +119,8 @@
               <img
                 class="meetings__member"
                 src="./assets/desktop/image-woman-in-videocall.jpg"
-                alt="woman-in-videocall"
+                alt=""
+                role="presentation"
                 loading="lazy"
                 width="147"
                 height="144"
@@ -125,7 +132,8 @@
               <img
                 class="meetings__member"
                 src="./assets/desktop/image-women-videochatting.jpg"
-                alt="women-videochatting"
+                alt=""
+                role="presentation"
                 loading="lazy"
                 width="147"
                 height="144"
@@ -137,7 +145,7 @@
               <img
                 class="meetings__member"
                 src="./assets/desktop/image-men-in-meeting.jpg"
-                alt="women-videochatting"
+                alt="Business video call"
                 loading="lazy"
                 width="147"
                 height="144"
@@ -149,7 +157,8 @@
               <img
                 class="meetings__member"
                 src="./assets/desktop/image-man-texting.jpg"
-                alt="women-videochatting"
+                alt=""
+                role="presentation"
                 loading="lazy"
                 width="147"
                 height="144"
@@ -174,7 +183,7 @@
       <!-- experience -->
       <section class="section experience">
         <div class="circle">
-          <p class="circle__number">02</p>
+          <span class="circle__number" aria-hidden="true">02</span>
         </div>
         <div class="experience__wrapper">
           <h2 class="experience__title title">Experience more together</h2>
@@ -182,12 +191,16 @@
             Stay connected with reliable HD meetings and unlimited one-on-one
             and group video sessions.
           </p>
-          <button
+          <a
             class="experience__button button button--purple"
-            type="button"
+            href="#"
+            download
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-label="Download the application version 1.3"
           >
             Download <span>v1.3</span>
-          </button>
+          </a>
         </div>
       </section>
     </main>

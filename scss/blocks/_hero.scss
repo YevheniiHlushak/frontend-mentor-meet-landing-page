@@ -44,6 +44,7 @@
     top: 0;
     left: -3.5vw;
   }
+
   &__image--desktop-right {
     position: absolute;
     top: rem(50);
@@ -58,7 +59,7 @@
   &__title {
     margin-block-end: rem(24);
     font-size: fluid($h1-font-size-mobile, $h1-font-size-desktop);
-    line-height: var(--heading-line-hight);
+    line-height: var(--heading-line-height);
     color: var(--color-slate-900);
     font-weight: var(--fw-black);
   }
