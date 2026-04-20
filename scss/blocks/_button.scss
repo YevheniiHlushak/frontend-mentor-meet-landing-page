@@ -7,6 +7,7 @@
   border: none;
   font-weight: var(--fw-black);
   cursor: pointer;
+  transition: background-color var(--transition-duration);
 
   &--cyan {
     background-color: var(--color-cyan-600);
@@ -15,6 +16,10 @@
     & span {
       color: var(--color-cyan-300);
     }
+
+    &:hover {
+      background-color: var(--color-purple-600);
+    }
   }
 
   &--purple {
@@ -22,7 +27,15 @@
     color: var(--color-white);
 
     & span {
-      color: var(--color-purpple-300);
+      color: var(--color-purple-300);
     }
+
+    &:hover {
+      background-color: var(--color-cyan-600);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition-duration: 0.01ms;
   }
 }

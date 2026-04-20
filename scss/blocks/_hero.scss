@@ -9,9 +9,6 @@
   @media screen and (max-width: $tablet-bp) {
     padding-inline: rem(35);
   }
-  // @media screen and (min-width: $tablet-bp) and (max-width: $laptop-bp) {
-  //   padding-inline: fluid(44, 160, 768, 1024);
-  // }
 
   @media screen and (min-width: $tablet-bp) {
     padding-block-end: rem(64);
